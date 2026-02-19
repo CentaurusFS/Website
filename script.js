@@ -103,22 +103,3 @@ const metricObserver = new IntersectionObserver(
 );
 
 metrics.forEach((metric) => metricObserver.observe(metric));
-
-const teamPhotos = document.querySelectorAll(".team-photo");
-teamPhotos.forEach((photo) => {
-  const wrapper = photo.closest(".team-image");
-  if (!wrapper) {
-    return;
-  }
-
-  const markMissing = () => wrapper.classList.add("missing");
-
-  if (photo.complete) {
-    if (!photo.naturalWidth) {
-      markMissing();
-    }
-    return;
-  }
-
-  photo.addEventListener("error", markMissing, { once: true });
-});
