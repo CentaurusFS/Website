@@ -228,11 +228,14 @@ a {
 }
 
 .site-nav {
-  justify-self: center;
+  justify-self: stretch;
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  justify-content: space-between;
+  gap: 0.9rem;
   min-width: 0;
+  width: 100%;
+  padding-inline: clamp(0.45rem, 1.2vw, 1.25rem);
 }
 
 .site-nav a {
@@ -1248,8 +1251,10 @@ h3 {
     box-shadow: var(--shadow-md);
     padding: 0.58rem;
     flex-direction: column;
+    justify-content: flex-start;
     gap: 0.2rem;
     align-items: stretch;
+    width: auto;
   }
 
   .site-nav.is-open {
