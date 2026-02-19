@@ -486,6 +486,11 @@ h3 {
   font-size: clamp(2rem, 4vw, 3.5rem);
 }
 
+.sublead {
+  margin-top: 0.7rem;
+  color: rgba(23, 28, 46, 0.78);
+}
+
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -569,6 +574,39 @@ h3 {
   text-decoration: none;
   font-weight: 700;
   color: var(--blue-2);
+}
+
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.link-card {
+  display: block;
+  text-decoration: none;
+  border: 1px solid rgba(191, 197, 208, 0.86);
+  border-radius: var(--radius-lg);
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(176, 141, 87, 0.62);
+  box-shadow: var(--shadow-md);
+}
+
+.link-card h3 {
+  margin-bottom: 0.45rem;
+  max-width: 18ch;
+}
+
+.link-card p {
+  margin: 0;
+  color: rgba(23, 28, 46, 0.86);
 }
 
 .section-dark {
@@ -810,6 +848,53 @@ h3 {
   max-width: 28ch;
 }
 
+.page-cta {
+  border: 1px solid rgba(191, 197, 208, 0.86);
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.page-cta h2 {
+  font-size: clamp(1.3rem, 2.2vw, 2rem);
+  max-width: 28ch;
+}
+
+.page-cta p {
+  margin: 0.55rem 0 0;
+  color: rgba(23, 28, 46, 0.86);
+  max-width: 64ch;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.faq-card {
+  border: 1px solid rgba(191, 197, 208, 0.86);
+  border-radius: var(--radius-lg);
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-card h3 {
+  margin-bottom: 0.45rem;
+  max-width: 20ch;
+}
+
+.faq-card p {
+  margin: 0;
+  color: rgba(23, 28, 46, 0.86);
+}
+
 .team-card ul {
   list-style: none;
   margin: 0;
@@ -957,7 +1042,8 @@ h3 {
 
   .service-grid,
   .reference-grid,
-  .team-grid {
+  .team-grid,
+  .faq-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
@@ -984,7 +1070,9 @@ h3 {
   .reference-grid,
   .process-grid,
   .team-grid,
-  .career-grid {
+  .career-grid,
+  .faq-grid,
+  .link-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1003,6 +1091,11 @@ h3 {
   }
 
   .cta-band {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-cta {
     flex-direction: column;
     align-items: flex-start;
   }
