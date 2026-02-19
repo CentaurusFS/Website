@@ -134,18 +134,17 @@ a {
 }
 
 .site-header .nav-shell {
-  width: 100vw;
-  max-width: none;
-  margin-inline: calc(50% - 50vw);
+  width: 100vw !important;
+  max-width: none !important;
+  margin-inline: calc(50% - 50vw) !important;
 }
 
 .nav-shell {
   width: 100%;
   min-height: 92px;
-  display: grid;
-  grid-template-columns: auto auto 1fr auto;
+  display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: clamp(0.6rem, 1vw, 1rem);
   position: relative;
   padding-inline: clamp(0.35rem, 1vw, 1rem);
 }
@@ -228,10 +227,11 @@ a {
 }
 
 .site-nav {
+  flex: 1 1 auto;
   justify-self: stretch;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 0.9rem;
   min-width: 0;
   width: 100%;
@@ -272,6 +272,8 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.72rem;
+  margin-left: auto;
+  flex: 0 0 auto;
 }
 
 .lang-switch {
@@ -1232,6 +1234,7 @@ h3 {
 
 @media (max-width: 1120px) {
   .nav-shell {
+    display: grid;
     grid-template-columns: auto auto 1fr;
   }
 
