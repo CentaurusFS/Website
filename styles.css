@@ -134,12 +134,14 @@ a {
 }
 
 .nav-shell {
+  width: 100%;
   min-height: 92px;
   display: grid;
   grid-template-columns: auto auto 1fr auto;
   align-items: center;
   gap: 1rem;
   position: relative;
+  padding-inline: clamp(0.8rem, 2.2vw, 2.2rem);
 }
 
 .brand {
