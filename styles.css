@@ -133,7 +133,7 @@ a {
   box-shadow: 0 10px 28px rgba(23, 28, 46, 0.09);
 }
 
-.site-header .container.nav-shell {
+.site-header .nav-shell {
   width: 100%;
   max-width: none;
   margin: 0;
@@ -147,7 +147,7 @@ a {
   align-items: center;
   gap: 1rem;
   position: relative;
-  padding-inline: clamp(0.8rem, 2.2vw, 2.2rem);
+  padding-inline: clamp(0.35rem, 1vw, 1rem);
 }
 
 .brand {
