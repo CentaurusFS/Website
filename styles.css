@@ -648,6 +648,162 @@ h3 {
   font-size: 0.9rem;
 }
 
+.pitch-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.72rem;
+}
+
+.pitch-tile {
+  border: 1px solid rgba(191, 197, 208, 0.84);
+  border-radius: 16px;
+  padding: 0.92rem;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow-sm);
+  min-width: 0;
+}
+
+.pitch-tile strong {
+  display: block;
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.44rem;
+}
+
+.pitch-tile h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.36rem;
+}
+
+.pitch-tile p {
+  margin: 0;
+  color: rgba(23, 28, 46, 0.84);
+  font-size: 0.9rem;
+}
+
+.pitch-meter {
+  margin-top: 0.66rem;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(191, 197, 208, 0.52);
+  overflow: hidden;
+}
+
+.pitch-meter span {
+  display: block;
+  height: 100%;
+  width: var(--fill, 70%);
+  border-radius: inherit;
+  background: linear-gradient(125deg, var(--blue-2), var(--gold));
+}
+
+.flowline {
+  border: 1px solid rgba(191, 197, 208, 0.84);
+  border-radius: var(--radius-xl);
+  padding: 1.22rem;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-sm);
+}
+
+.flowline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.62rem;
+}
+
+.flowline-step {
+  border: 1px solid rgba(191, 197, 208, 0.76);
+  border-radius: 14px;
+  padding: 0.78rem;
+  background: rgba(255, 255, 255, 0.96);
+  position: relative;
+  min-width: 0;
+}
+
+.flowline-step::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -0.36rem;
+  width: 8px;
+  height: 8px;
+  transform: translateY(-50%) rotate(45deg);
+  border-top: 1px solid rgba(176, 141, 87, 0.72);
+  border-right: 1px solid rgba(176, 141, 87, 0.72);
+}
+
+.flowline-step:last-child::after {
+  display: none;
+}
+
+.flowline-step .step-key {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.42rem;
+  background: linear-gradient(150deg, var(--blue-3), var(--blue-2));
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.flowline-step h3 {
+  font-size: 1rem;
+  margin-bottom: 0.26rem;
+}
+
+.flowline-step p {
+  margin: 0;
+  font-size: 0.86rem;
+  color: rgba(23, 28, 46, 0.84);
+}
+
+.case-bars {
+  display: grid;
+  gap: 0.52rem;
+  margin-top: 0.64rem;
+}
+
+.case-row {
+  display: grid;
+  grid-template-columns: 96px 1fr 44px;
+  align-items: center;
+  gap: 0.48rem;
+}
+
+.case-row em {
+  font-style: normal;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.case-row strong {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.case-track {
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(191, 197, 208, 0.32);
+  overflow: hidden;
+}
+
+.case-track span {
+  display: block;
+  height: 100%;
+  width: var(--fill, 70%);
+  border-radius: inherit;
+  background: linear-gradient(125deg, var(--blue-4), var(--gold));
+}
+
 .section-dark .visual-card {
   border-color: rgba(148, 208, 255, 0.22);
   background: rgba(12, 24, 33, 0.44);
@@ -677,6 +833,20 @@ h3 {
   border-color: rgba(148, 208, 255, 0.28);
   background: rgba(12, 24, 33, 0.45);
   color: rgba(255, 255, 255, 0.88);
+}
+
+.section-dark .pitch-tile {
+  border-color: rgba(148, 208, 255, 0.24);
+  background: rgba(12, 24, 33, 0.42);
+}
+
+.section-dark .pitch-tile h3,
+.section-dark .pitch-tile p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.section-dark .pitch-meter {
+  background: rgba(191, 197, 208, 0.3);
 }
 
 .ticker {
@@ -1301,6 +1471,18 @@ h3 {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
+  .pitch-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flowline-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flowline-step::after {
+    display: none;
+  }
+
   .service-lanes {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1331,6 +1513,11 @@ h3 {
   .career-grid,
   .faq-grid,
   .link-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pitch-strip,
+  .flowline-grid {
     grid-template-columns: 1fr;
   }
 
