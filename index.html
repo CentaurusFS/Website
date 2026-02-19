@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Centaurus Advisory GmbH: Beratung für Nachfolgelösungen, Unternehmensentwicklung, Digitalisierung und KI mit Fokus auf kleine und mittelständische Unternehmen."
+      content="Centaurus Advisory GmbH: Strategische Beratung fuer Nachfolgeloesungen, Unternehmensentwicklung, Digitalisierung und KI mit Fokus auf den Mittelstand."
     />
     <title>Centaurus Advisory GmbH</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,17 +17,17 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="ambient" aria-hidden="true"></div>
+    <div class="page-bg" aria-hidden="true"></div>
 
-    <header class="site-header" id="home">
+    <header class="site-header" id="top">
       <div class="container nav-shell">
-        <a class="brand" href="#home" aria-label="Zur Startseite">
-          <span class="brand-badge">
-            <img src="assets/logo-centaurus-advisory.jpg" alt="Centaurus Advisory GmbH Logo" />
+        <a class="brand" href="#top" aria-label="Zur Startseite">
+          <span class="brand-logo" aria-hidden="true">
+            <img src="assets/logo-centaurus-advisory.jpg" alt="" />
           </span>
           <span class="brand-copy">
-            <span class="brand-name">Centaurus Advisory</span>
-            <span class="brand-legal">GmbH</span>
+            <strong>Centaurus Advisory</strong>
+            <small>GmbH</small>
           </span>
         </a>
 
@@ -35,10 +35,9 @@
           <span></span>
           <span></span>
           <span></span>
-          Menü
         </button>
 
-        <nav id="site-nav" class="site-nav" aria-label="Hauptnavigation">
+        <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
           <a href="#leistungen">Leistungen</a>
           <a href="#referenzen">Referenzen</a>
           <a href="#vorgehen">Vorgehen</a>
@@ -46,341 +45,253 @@
           <a href="#kontakt">Kontakt</a>
         </nav>
 
-        <a class="nav-cta" href="#kontakt">Erstgespräch</a>
+        <div class="nav-actions">
+          <div class="lang-switch" aria-label="Sprachauswahl">
+            <a href="index.html" class="active" lang="de">DE</a>
+            <a href="en.html" lang="en">EN</a>
+          </div>
+          <a class="nav-cta" href="#kontakt">Erstgespraech</a>
+        </div>
       </div>
     </header>
 
     <main>
       <section class="hero section reveal">
         <div class="container hero-grid">
-          <div class="hero-content">
+          <div>
             <p class="eyebrow">Strategieberatung fuer den Mittelstand</p>
-            <h1>
-              Nachfolge sichern. Unternehmenswert entwickeln. Digitalisierung und KI
-              wirksam in die Praxis bringen.
-            </h1>
+            <h1>Nachfolge, Entwicklung und KI-Transformation aus einer Hand.</h1>
             <p class="lead">
               Centaurus Advisory GmbH begleitet kleine und mittelstaendische Unternehmen in
-              kritischen Entscheidungsphasen. Als partnergefuehrtes Team liefern wir klare
-              Strategien, belastbare Entscheidungsgrundlagen und umsetzbare Loesungen.
+              entscheidenden Phasen. Wir arbeiten partnergefuehrt, diskret und
+              umsetzungsorientiert.
             </p>
+
             <div class="hero-actions">
               <a class="btn btn-primary" href="#kontakt">Unverbindliches Erstgespraech</a>
-              <a class="btn btn-secondary" href="#referenzen">Anonymisierte Referenzen</a>
+              <a class="btn btn-secondary" href="#referenzen">Mandatsbeispiele ansehen</a>
             </div>
+
             <ul class="hero-metrics">
               <li>
                 <strong class="metric-value" data-target="2">0</strong>
-                <span>Partner in jedem Mandat</span>
+                <span>Geschaeftsfuehrer in jedem Projekt</span>
               </li>
               <li>
                 <strong class="metric-value" data-target="100" data-suffix="%">0%</strong>
-                <span>Verantwortung im Kernteam</span>
+                <span>Direkte Verantwortung im Kernteam</span>
               </li>
               <li>
                 <strong class="metric-value" data-target="3">0</strong>
-                <span>Leistungsfelder aus einer Hand</span>
+                <span>Leistungsfelder mit einem Ansprechpartner</span>
               </li>
             </ul>
           </div>
 
           <aside class="hero-panel">
-            <p class="panel-label">Mandatsfokus 2026</p>
-            <h2>Kritische Unternehmensphasen strukturiert meistern.</h2>
+            <p class="panel-kicker">Mandatsfokus</p>
+            <h2>Kritische Entscheidungen strukturiert vorbereiten und sicher umsetzen.</h2>
             <ol>
-              <li>Nachfolgeoptionen transparent bewerten und entscheiden.</li>
-              <li>Unternehmen organisatorisch und strategisch zukunftsfest aufstellen.</li>
-              <li>Digitalisierung und KI gezielt entlang realer Geschaeftsprozesse umsetzen.</li>
-              <li>Steuerung mit klaren Kennzahlen, Verantwortlichkeiten und Meilensteinen.</li>
+              <li>Nachfolgeoptionen transparent bewerten.</li>
+              <li>Organisation und Fuehrung zukunftsfest aufstellen.</li>
+              <li>Digitalisierung und KI mit realem Business-Impact umsetzen.</li>
+              <li>Fortschritt ueber klare KPIs und Meilensteine steuern.</li>
             </ol>
-            <p class="panel-quote">Diskret. Substanziell. Umsetzungsstark.</p>
           </aside>
         </div>
       </section>
 
-      <section class="proof-strip reveal" aria-label="Branchenfokus">
-        <div class="container proof-inner">
+      <section class="ticker reveal" aria-label="Branchenfokus">
+        <div class="container ticker-inner">
           <p>Branchenfokus</p>
           <ul>
             <li>Industrie &amp; Produktion</li>
             <li>Handel &amp; Distribution</li>
-            <li>Dienstleistung</li>
+            <li>Dienstleistungen</li>
             <li>Familienunternehmen</li>
             <li>Wachsende KMU</li>
           </ul>
         </div>
       </section>
 
-      <section id="leistungen" class="section reveal">
+      <section class="section reveal" id="leistungen">
         <div class="container">
           <div class="section-head">
             <p class="eyebrow">Leistungsarchitektur</p>
             <h2>Beratungsfelder mit hoher unternehmerischer Relevanz</h2>
           </div>
+
           <div class="service-grid">
-            <article class="service-card">
-              <p class="card-kicker">01</p>
-              <h3>Nachfolgelösungen</h3>
+            <article class="card">
+              <p class="card-id">01</p>
+              <h3>Nachfolgeloesungen</h3>
               <p>
-                Gestaltung tragfaehiger Uebergabeszenarien inklusive Rollenmodell,
-                Zeitplanung, Governance und Kommunikation mit allen Schluesselakteuren.
+                Strukturierte Uebergabeszenarien inklusive Rollenmodell, Zeitplan,
+                Governance und Kommunikation.
               </p>
             </article>
 
-            <article class="service-card">
-              <p class="card-kicker">02</p>
+            <article class="card">
+              <p class="card-id">02</p>
               <h3>Unternehmensentwicklung</h3>
               <p>
-                Schaerfung von Strategie, Organisation und Fuehrung fuer stabile Strukturen,
-                hoehere Steuerbarkeit und nachhaltige Wachstumsfaehigkeit.
+                Weiterentwicklung von Strategie, Organisation und Fuehrung fuer
+                nachhaltige Wachstumsfaehigkeit.
               </p>
             </article>
 
-            <article class="service-card">
-              <p class="card-kicker">03</p>
+            <article class="card">
+              <p class="card-id">03</p>
               <h3>Digitalisierung &amp; KI</h3>
               <p>
-                Identifikation und Priorisierung konkreter Digital- und KI-Hebel,
-                Umsetzung in Etappen und Etablierung praktikabler Standards im Alltag.
+                Priorisierung und Umsetzung konkreter Digital- und KI-Initiativen entlang
+                realer Prozesse.
               </p>
             </article>
 
-            <article class="service-card">
-              <p class="card-kicker">04</p>
+            <article class="card">
+              <p class="card-id">04</p>
               <h3>Executive Sparring</h3>
               <p>
                 Direkter Sparringspartner fuer Geschaeftsfuehrung und Gesellschafter bei
-                sensiblen Entscheidungen, Transformationen und kritischen Weichenstellungen.
+                sensiblen Weichenstellungen.
               </p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="referenzen" class="section section-dark reveal">
+      <section class="section section-dark reveal" id="referenzen">
         <div class="container">
           <div class="section-head">
             <p class="eyebrow">Referenzen</p>
-            <h2>Ausgewaehlte Mandatsbeispiele aus dem Mittelstand</h2>
-            <p class="section-note">
-              Alle Beispiele sind anonymisiert und verdichtet dargestellt.
-            </p>
+            <h2>Anonymisierte Mandatsbeispiele aus dem Mittelstand</h2>
           </div>
 
           <div class="reference-grid">
             <article class="reference-card">
-              <p class="reference-tag">Nachfolge</p>
+              <p class="tag">Nachfolge</p>
               <h3>Familiengefuehrter Produktionsbetrieb</h3>
-              <dl>
-                <div>
-                  <dt>Ausgangslage</dt>
-                  <dd>Unklare Nachfolgeoptionen, hohe emotionale und finanzielle Tragweite.</dd>
-                </div>
-                <div>
-                  <dt>Vorgehen</dt>
-                  <dd>
-                    Strukturierte Szenarioanalyse, Stakeholder-Moderation und Umsetzungsroadmap.
-                  </dd>
-                </div>
-                <div>
-                  <dt>Ergebnis</dt>
-                  <dd>
-                    Verbindlicher Nachfolgefahrplan mit klaren Rollen, Timings und Governance.
-                  </dd>
-                </div>
-              </dl>
+              <p>
+                Szenarioanalyse, Stakeholder-Moderation und Umsetzungsfahrplan fuer eine
+                geordnete Uebergabe.
+              </p>
             </article>
 
             <article class="reference-card">
-              <p class="reference-tag">Unternehmensentwicklung</p>
+              <p class="tag">Entwicklung</p>
               <h3>Regionale Handelsgruppe</h3>
-              <dl>
-                <div>
-                  <dt>Ausgangslage</dt>
-                  <dd>
-                    Organisatorische Reibungsverluste und fehlende Transparenz in Kernprozessen.
-                  </dd>
-                </div>
-                <div>
-                  <dt>Vorgehen</dt>
-                  <dd>
-                    Zielbild, Prozessneuschnitt, KPI-System und klare Fuehrungsroutinen.
-                  </dd>
-                </div>
-                <div>
-                  <dt>Ergebnis</dt>
-                  <dd>
-                    Hoehere Steuerbarkeit, schnellere Entscheidungswege und messbarer Fortschritt.
-                  </dd>
-                </div>
-              </dl>
+              <p>
+                Prozessneuschnitt, KPI-System und Fuehrungsroutinen fuer bessere
+                Steuerbarkeit und schnellere Entscheidungen.
+              </p>
             </article>
 
             <article class="reference-card">
-              <p class="reference-tag">Digitalisierung &amp; KI</p>
+              <p class="tag">Digital &amp; KI</p>
               <h3>B2B-Dienstleistungsunternehmen</h3>
-              <dl>
-                <div>
-                  <dt>Ausgangslage</dt>
-                  <dd>
-                    Viele manuelle Routinen, geringe Skalierbarkeit und heterogene Datenlage.
-                  </dd>
-                </div>
-                <div>
-                  <dt>Vorgehen</dt>
-                  <dd>
-                    Priorisierte Digital- und KI-Initiativen mit schneller Pilotierung im Betrieb.
-                  </dd>
-                </div>
-                <div>
-                  <dt>Ergebnis</dt>
-                  <dd>
-                    Entlastete Teams, hoehere Prozessqualitaet und belastbare Entscheidungsdaten.
-                  </dd>
-                </div>
-              </dl>
+              <p>
+                Pilotierung digitaler Loesungen, KI-basierte Effizienzhebel und
+                Etablierung belastbarer Datenstrukturen.
+              </p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="vorgehen" class="section reveal">
+      <section class="section reveal" id="vorgehen">
         <div class="container">
           <div class="section-head">
             <p class="eyebrow">Vorgehen</p>
-            <h2>Vier Phasen fuer schnelle Klarheit und saubere Umsetzung</h2>
+            <h2>Vier Phasen fuer saubere Entscheidungen und messbare Umsetzung</h2>
           </div>
 
           <div class="process-grid">
             <article class="process-card">
               <span>01</span>
               <h3>Diagnose</h3>
-              <p>Ausgangslage, Ziele und Risiken praezise erfassen.</p>
+              <p>Ausgangslage, Ziele und Risiken klar erfassen.</p>
             </article>
             <article class="process-card">
               <span>02</span>
-              <h3>Entscheidung</h3>
-              <p>Optionen bewerten, priorisieren und gemeinsam festlegen.</p>
+              <h3>Priorisierung</h3>
+              <p>Optionen bewerten und fokussierte Entscheidungsvorlagen erstellen.</p>
             </article>
             <article class="process-card">
               <span>03</span>
               <h3>Umsetzung</h3>
-              <p>Massnahmen mit klaren Verantwortlichkeiten realisieren.</p>
+              <p>Massnahmen mit Verantwortlichkeiten und Timelines realisieren.</p>
             </article>
             <article class="process-card">
               <span>04</span>
               <h3>Steuerung</h3>
-              <p>Ergebnisse messen, nachschaerfen und nachhaltig verankern.</p>
+              <p>Fortschritt ueber KPIs tracken und konsequent nachschaerfen.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="team" class="section section-light reveal">
+      <section class="section section-light reveal" id="team">
         <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Team</p>
-            <h2>Direkte Ansprechpartner statt anonymer Projektstrukturen</h2>
+            <p class="eyebrow">Geschaeftsfuehrung</p>
+            <h2>Direkte Ansprechpartner in jedem Mandat</h2>
           </div>
 
           <div class="team-grid">
             <article class="team-card">
-              <div class="team-image" aria-hidden="true">FS</div>
+              <div class="team-image">
+                <img src="assets/team-flavian.jpg" alt="Flavian Schmidt" class="team-photo" loading="lazy" />
+                <span class="team-initials">FS</span>
+              </div>
               <h3>Flavian Schmidt</h3>
               <p>Geschaeftsfuehrer</p>
               <ul>
-                <li>Nachfolgelösungen &amp; Strategie</li>
-                <li>Organisationsentwicklung</li>
-                <li>Foto folgt</li>
+                <li>Nachfolgeloesungen</li>
+                <li>Unternehmensentwicklung</li>
               </ul>
             </article>
 
             <article class="team-card">
-              <div class="team-image" aria-hidden="true">ML</div>
+              <div class="team-image">
+                <img src="assets/team-maximilian.jpg" alt="Maximilian Lotz" class="team-photo" loading="lazy" />
+                <span class="team-initials">ML</span>
+              </div>
               <h3>Maximilian Lotz</h3>
               <p>Geschaeftsfuehrer</p>
               <ul>
-                <li>Digitalisierung &amp; KI-Umsetzung</li>
-                <li>Operative Verbesserung</li>
-                <li>Foto folgt</li>
+                <li>Digitalisierung &amp; KI</li>
+                <li>Operative Umsetzung</li>
               </ul>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section reveal" id="vertrauen">
-        <div class="container">
-          <div class="section-head">
-            <p class="eyebrow">Vertrauen &amp; Arbeitsprinzipien</p>
-            <h2>Was unsere Mandanten an der Zusammenarbeit schaetzen</h2>
-          </div>
-
-          <div class="trust-grid">
-            <article class="trust-card">
-              <h3>Partnergefuehrt</h3>
-              <p>
-                Jede Phase wird direkt von den Gruendern begleitet. Keine Uebergabe an
-                wechselnde Teams.
-              </p>
-            </article>
-            <article class="trust-card">
-              <h3>Diskret</h3>
-              <p>
-                Sensible Themen wie Nachfolge, Gesellschafterstruktur und Transformation werden
-                mit maximaler Vertraulichkeit behandelt.
-              </p>
-            </article>
-            <article class="trust-card">
-              <h3>Umsetzungsnah</h3>
-              <p>
-                Wir liefern nicht nur Konzepte, sondern arbeiten an konkreten Entscheidungen,
-                Routinen und Ergebnissen im Tagesgeschaeft.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="kontakt" class="section section-contact reveal">
-        <div class="container contact-wrap">
+      <section class="section section-contact reveal" id="kontakt">
+        <div class="container contact-grid">
           <div>
             <p class="eyebrow">Kontakt</p>
             <h2>Centaurus Advisory GmbH</h2>
             <p class="lead">
-              Wenn Sie eine Nachfolgeentscheidung vorbereiten, Ihr Unternehmen strukturiert
-              weiterentwickeln oder Digital- und KI-Initiativen wirksam umsetzen wollen,
-              sprechen wir gerne mit Ihnen.
+              Sprechen Sie mit uns ueber Ihr Vorhaben. Wir melden uns zeitnah mit einer
+              klaren Ersteinschaetzung und den naechsten sinnvollen Schritten.
             </p>
-            <div class="contact-meta">
-              <p><strong>Standort:</strong> Gartenstrasse 14, Huenfeld</p>
-              <p>
-                <strong>E-Mail:</strong>
-                <a href="mailto:kontakt@centaurus-advisory.de">kontakt@centaurus-advisory.de</a>
-              </p>
-              <p><strong>Telefon:</strong> +49 (0) ... (Platzhalter)</p>
-              <p>
-                <strong>Karte:</strong>
-                <a
-                  href="https://maps.google.com/?q=Gartenstra%C3%9Fe+14+H%C3%BCnfeld"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Standort in Google Maps oeffnen</a
-                >
-              </p>
-            </div>
+            <p class="contact-line"><strong>Standort:</strong> Gartenstrasse 14, Huenfeld</p>
+            <p class="contact-line">
+              <strong>E-Mail:</strong>
+              <a href="mailto:kontakt@centaurus-advisory.de">kontakt@centaurus-advisory.de</a>
+            </p>
+            <p class="contact-line"><strong>Telefon:</strong> +49 (0) ... (Platzhalter)</p>
           </div>
 
           <aside class="contact-card">
             <h3>Erstgespraech anfragen</h3>
             <p>
-              Schildern Sie kurz Ihr Anliegen. Wir melden uns zeitnah zur Einordnung und
-              Abstimmung der naechsten Schritte.
+              Sie koennen uns direkt per E-Mail kontaktieren. Impressum und Datenschutz
+              werden als eigene Seiten ergaenzt.
             </p>
-            <a class="btn btn-primary" href="mailto:kontakt@centaurus-advisory.de"
-              >Jetzt Kontakt aufnehmen</a
-            >
-            <small>Impressum und Datenschutz werden als eigene Seiten ergaenzt.</small>
+            <a class="btn btn-primary" href="mailto:kontakt@centaurus-advisory.de">Jetzt Kontakt aufnehmen</a>
           </aside>
         </div>
       </section>

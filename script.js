@@ -5,31 +5,31 @@ if (yearNode) {
 
 const header = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
-const siteNav = document.getElementById("site-nav");
+const nav = document.getElementById("site-nav");
 
-const setHeaderState = () => {
+const syncHeader = () => {
   if (!header) {
     return;
   }
   header.classList.toggle("is-compact", window.scrollY > 18);
 };
 
-setHeaderState();
-window.addEventListener("scroll", setHeaderState, { passive: true });
+syncHeader();
+window.addEventListener("scroll", syncHeader, { passive: true });
 
-if (menuToggle && siteNav) {
+if (menuToggle && nav) {
   const closeNav = () => {
-    siteNav.classList.remove("is-open");
+    nav.classList.remove("is-open");
     menuToggle.setAttribute("aria-expanded", "false");
   };
 
   menuToggle.addEventListener("click", () => {
-    const nextState = !siteNav.classList.contains("is-open");
-    siteNav.classList.toggle("is-open", nextState);
-    menuToggle.setAttribute("aria-expanded", String(nextState));
+    const open = !nav.classList.contains("is-open");
+    nav.classList.toggle("is-open", open);
+    menuToggle.setAttribute("aria-expanded", String(open));
   });
 
-  siteNav.querySelectorAll("a").forEach((link) => {
+  nav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", closeNav);
   });
 
@@ -38,18 +38,13 @@ if (menuToggle && siteNav) {
     if (!(target instanceof HTMLElement)) {
       return;
     }
-
-    if (
-      siteNav.classList.contains("is-open") &&
-      !siteNav.contains(target) &&
-      !menuToggle.contains(target)
-    ) {
+    if (nav.classList.contains("is-open") && !nav.contains(target) && !menuToggle.contains(target)) {
       closeNav();
     }
   });
 }
 
-const revealElements = document.querySelectorAll(".reveal");
+const revealBlocks = document.querySelectorAll(".reveal");
 const revealObserver = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
@@ -62,16 +57,16 @@ const revealObserver = new IntersectionObserver(
   },
   {
     threshold: 0.2,
-    rootMargin: "0px 0px -60px 0px",
+    rootMargin: "0px 0px -45px 0px",
   }
 );
 
-revealElements.forEach((el, index) => {
-  el.style.transitionDelay = `${index * 70}ms`;
-  revealObserver.observe(el);
+revealBlocks.forEach((block, idx) => {
+  block.style.transitionDelay = `${idx * 55}ms`;
+  revealObserver.observe(block);
 });
 
-const metricValues = document.querySelectorAll(".metric-value[data-target]");
+const metrics = document.querySelectorAll(".metric-value[data-target]");
 const metricObserver = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
@@ -84,21 +79,21 @@ const metricObserver = new IntersectionObserver(
         return;
       }
 
-      const target = Number(node.dataset.target || "0");
+      const targetValue = Number(node.dataset.target || "0");
       const suffix = node.dataset.suffix || "";
       const duration = 900;
       const start = performance.now();
 
-      const step = (timestamp) => {
-        const progress = Math.min((timestamp - start) / duration, 1);
+      const animate = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 3);
-        node.textContent = `${Math.round(target * eased)}${suffix}`;
+        node.textContent = `${Math.round(targetValue * eased)}${suffix}`;
         if (progress < 1) {
-          requestAnimationFrame(step);
+          requestAnimationFrame(animate);
         }
       };
 
-      requestAnimationFrame(step);
+      requestAnimationFrame(animate);
       observer.unobserve(node);
     });
   },
@@ -107,4 +102,23 @@ const metricObserver = new IntersectionObserver(
   }
 );
 
-metricValues.forEach((node) => metricObserver.observe(node));
+metrics.forEach((metric) => metricObserver.observe(metric));
+
+const teamPhotos = document.querySelectorAll(".team-photo");
+teamPhotos.forEach((photo) => {
+  const wrapper = photo.closest(".team-image");
+  if (!wrapper) {
+    return;
+  }
+
+  const markMissing = () => wrapper.classList.add("missing");
+
+  if (photo.complete) {
+    if (!photo.naturalWidth) {
+      markMissing();
+    }
+    return;
+  }
+
+  photo.addEventListener("error", markMissing, { once: true });
+});
